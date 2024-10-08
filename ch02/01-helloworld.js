@@ -20,5 +20,4 @@ const server = http.createServer((req,res) => {
       break
   } })
 
-server.listen(port, () => console.log(`server started on port ${port}; ` +
-  'press Ctrl-C to terminate....'))
+server.listen(port, () => console.log(`сервер запущен на порту 3000; нажмите Ctrl+C для завершения...`))
