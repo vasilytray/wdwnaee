@@ -35,6 +35,7 @@ app.use((req, res) => {
   res.status(404)
   res.render('404')
 })
+
 // Пользовательская страница 500
 app.use((err, req, res, next) => {
 console.error(err.message)
