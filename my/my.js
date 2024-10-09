@@ -1,6 +1,17 @@
 const express = require('express')
 
+const { engine: expressHandlebars } = require('express-handlebars')
+
 const app = express()
+
+// configure Handlebars view engine
+app.engine('handlebars', expressHandlebars({
+  defaultLayout: 'main',
+}))
+app.set('view engine', 'handlebars')
+
+app.use(express.static(__dirname + '/public'))
+
 
 const port = process.env.PORT || 3000
 
